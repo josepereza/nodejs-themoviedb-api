@@ -1,0 +1,16 @@
+<h2>Popular Films</h2>
+
+<div class="card-columns mt-3">
+  {{#each films}}
+    <div class="card">
+        <img class="card-img-top" src="{{posterurl}}" alt="Card image cap">
+      <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{storyline}}
+          </p>
+      </div>
+    </div>
+  {{else}}
+  <p>Empty films!!</p>
+  {{/each}}
+</div>

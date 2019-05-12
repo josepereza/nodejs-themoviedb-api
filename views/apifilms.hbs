@@ -1,0 +1,26 @@
+<h2>API Films</h2>
+
+        <form action="/apifilms" method="post">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Title Film" clas="form-control">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            film send
+                        </button>
+</form>
+
+<div class="card-columns mt-3">
+  {{#each films2}}
+    <div class="card">
+        <img class="card-img-top"  src="https://image.tmdb.org/t/p/w200{{poster_path}}" alt="Card image cap">
+      <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{overview}}
+          </p>
+      </div>
+    </div>
+  {{else}}
+  <p>Empty films!!</p>
+  {{/each}}
+</div>
